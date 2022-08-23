@@ -11,3 +11,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -ldflags="-X main.version=
 ENTRYPOINT ["/go/bin/hello"]
 
 EXPOSE 8080
+
+CMD ["go", "run", "src/main.go"]
